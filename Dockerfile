@@ -1,12 +1,14 @@
-
+# Use the official Tomcat image as the base image
 FROM tomcat:9.0.53-jdk11-openjdk
 
-# Copy WAR file to the webapps directory of Tomcat
-COPY dist/Demoservlet.war  /usr/local/tomcat/webapps/
+# Set the environment variables
+ENV JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"
 
+# Copy the WAR file to the webapps directory of Tomcat
+COPY ./dist/Demoservelet.war /usr/local/tomcat/webapps/
 
-# Expose port 8080 to the outside world
+# Expose port 8080
 EXPOSE 8080
 
-# Run Tomcat server
+# Define the command to run Tomcat
 CMD ["catalina.sh", "run"]
