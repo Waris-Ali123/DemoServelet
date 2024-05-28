@@ -40,9 +40,9 @@ public class register extends HttpServlet {
             String password = request.getParameter("password1");
             Part filePart = request.getPart("image");
             
-            String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
+            String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
             String dbUser = "root";
-            String dbPassword = "123456";
+            String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
             
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(jdbcURL,dbUser,dbPassword);

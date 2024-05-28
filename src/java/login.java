@@ -25,9 +25,9 @@ public class login extends HttpServlet {
         String uname = request.getParameter("name");
         String password = request.getParameter("password");
         
-        String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
+        String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
         String dbUser = "root";
-        String dbPassword = "123456";
+        String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
         
         PreparedStatement stmt = null; 
         Connection con = null;

@@ -82,9 +82,9 @@
                 PreparedStatement stmt = null;
                 System.out.println("Connection done" + con);  
                 System.out.println("Connection done" + stmt);
-                String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
+                String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
                 String dbUser = "root";
-                String dbPassword = "123456";
+                String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
                 int count=0;
 
                 try{
