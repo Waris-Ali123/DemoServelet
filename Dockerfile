@@ -8,7 +8,7 @@ ENV JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"
 COPY dist/DemoServelet.war /usr/local/tomcat/webapps/
 
 # Expose port 8080
-EXPOSE 8080
+EXPOSE 9092
 
 # Define the command to run Tomcat
 CMD ["catalina.sh", "run"]
