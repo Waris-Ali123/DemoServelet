@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <Style>
+         *{
+            margin: 0px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        body::-webkit-scrollbar {
+                    display: none;
+                }
+        
+        #header {
+            
+            width: 100%;
+            color: white;
+            height: auto;
+            padding-top: 25px;
+            padding-bottom: 25px;
+            display: flex;
+            align-items: center;
+            
+            
+        }
+
+        
+        #headerlinks {
+            color: white;
+            display: flex;
+            justify-content:right;
+            align-items: center;
+            gap: 25px;
+            width: 100%;
+            
+            
+        }
+        
+        
+        #header a {
+            color: white;
+            font-size: 17.33px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 15px;
+            padding: 15px;
+
+            
+            
+        }
+
+        #header a:hover{
+            text-decoration: none;
+            color: black;   
+            padding: 15px;
+                background-color: aliceblue;
+            border-radius: 5px;
+            
+        }
+
+        #header img {
+                    z-index: -1;
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                }
+
+
+        /* Container odd */
+        
+     
+                
+                
+
+                .containerEven {
+                  
+                    display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  border-top:2px solid darkcyan;
+                  background-color: whitesmoke;
+                  padding-top: 25px;
+                  padding-bottom: 25px;
+                  
+                  
+                    
+                    
+                }
+                
+                
+                .heading1 {
+                    color : rgb(0, 63, 68);
+                    text-align: center;
+                    
+                        }
+                        
+                        .paraEven {
+                    font-size: medium;
+                    font-family:Georgia;
+                    line-height: 30px;
+                    word-spacing: 5px;
+                    border-right: 3px solid darkcyan;
+                    border-radius: 15px;
+                    padding: 10px;
+                    width: 75%;
+                    transform: translateX(5%);
+                    text-align: justify;
+                    
+                    
+                }
+                
+                .containerOdd {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    border-top:2px solid darkcyan;
+                    background-color: bisque;
+                    padding-top: 25px;
+                    padding-bottom: 25px;
+                }
+
+                .paraOdd {
+                    font-size: medium;
+                    font-family:Georgia;
+                    line-height: 30px;
+                    word-spacing: 5px;
+                    border-left: 3px solid darkcyan;
+                    border-radius: 15px;
+                    padding: 10px;
+                    width: 75%;
+                    height: 50%;
+                    transform: translateX(5%);
+                    text-align: justify;
+
+                    
+                }
+                
+                .container {
+                  width: 100%;
+                  padding-top: 50px;
+                  padding-bottom: 25px;
+                  height: auto;
+                  /* height: 500px; */
+             
+                }
+                
+                
+ /* footer starts here */
+        #footercontainer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+             justify-content: space-around;
+             width:100%;
+             /* height: 400px; Set the height of the container */
+             border: 2px solid darkcyan; /* Add a border for better visibility */
+             background-color: black;
+             padding-top: 35px;
+          
+            }
+
+            
+            #footerDirectSubContainer1 {
+                width: 400px;
+                padding-left: 25px;
+                padding-right: 25px;
+                height: 350px;  
+                display: flex;
+                flex-direction: column;
+                gap:15px;  
+
+            }
+            
+            #footerLogo {
+                display: flex;
+                gap: 15px;
+            }
+
+            #footerDirectSubContainer2 {
+                display: flex;
+                /* width : 700px; */
+                flex-wrap: wrap;
+                column-gap: 25px;
+                padding-left: 25px;
+                /* align-items: center; */
+                justify-content: center;
+                padding-right: 25px;
+            }
+            
+            .InsidefooterSubContainer2{
+                /* width:inherit; */
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .InsidefooterSubContainer2 a{
+                text-decoration: none;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: last baseline;
+                /* gap: 20PX;  */
+            }
+            
+            .InsidefooterSubContainer2 a:hover{
+                text-decoration: underline;
+                color: aqua;
+            }
+
+            .InsidefooterSubContainer2 span {
+                text-align: justify;
+                /* line-height:; */
+                /* width:fit-content; */
+            }
+            .footerPara {
+                    font-size: medium;
+                    font-family:Georgia;
+                    text-align: justify;
+                    word-spacing: 5px;
+                    line-height: 2;
+                    color: rgb(44, 44, 44);
+            
+                }
+       
+      
+        
+            
+            </style>
+</head>
+<body>
+
+    <!-- container header -->
+    <div id ="header" >
+        <div id ="headerlinks">
+            <a href="index.html" >Home</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="Institute.html"> Institutes </a>
+            <a href="Donate.html">Donate Now</a>   
+        </div>
+        <img src="https://img.freepik.com/free-vector/luxury-wave-gradient-background-dark-modern-design_343694-3089.jpg" alt="Image" width="100%" height="100px" > 
+    </div>
+    <!-- container header ends -->
+
+    
+    
+    <!-- container2 main content -->
+    <div id="container2" class="containerEven" >
+
+        <h1 class="heading1" >About Us</h1>
+
+        <div class="paraEven" >Taiba College of Integrated Studies is an educational, socio-cultural, charitable and none-political institution established under the patronage of Jamia Markazu Ssaqafathi Ssunniya- Calicut- Kerala, aiming at providing quality education uniting both material and spiritual concepts to mold a cadre of educationally qualified, spiritually motivated and socially committed leaders ready take up the challenges of today and tomorrow in the field of social reformation. <br><br>
+            It principally concentrates on uplifting and empowering the deprived sections of the society with education and training along with the moral values and culture. <br><br>
+            We dream a potent and vibrant younger generation flying to the apex of success providing them the best environment possible to explore, experience and express themselves along with food, accommodation, tuition etc. at no cost. <br> <br>
+        Here, the students find a healthier platform to heighten their traits, skills and talents.</div>
+        
+    </div>
+    
+    <div id="container3" class="containerOdd">
+
+        <h1 class="heading1">VISION</h1>
+
+
+        <div class="paraOdd">To enlighten the new-fangled generation with right knowledge that will bring out future leaders of excellence and become a corrective force in the society.</div>
+        
+    </div>
+
+    <div class="containerEven" id="container4" >
+
+        <h1 class="heading1"    >TAIBA COLLEGE OF INTEGRATED STUDIES</h1>
+
+        
+        <div class="paraEven" >TCIS is a residential educational program projected endowing with both Islamic and modern education beneath an umbrella. This institute, with an integrated curriculum, intends to produce a dedicated cadre of a vibrant intelligentsia of scholars and propagators, which is spiritually holistic and professionally competent and could lead the society from the frontline. <br><br>
+            Admission to TCIS is based on an entrance test and personal interview. Every year a maximum number of 25 male students who have passed their 7th standard with high distinction, will be admitted for this course with the duration of eight years. Moral studies include Aalim (Graduate in Islamic Studies) course and Modern education consist of high schooling, two year’s secondary education and three years graduation course from UGC recognized state / central universities. The learning group will be mentored under the direct supervision of competent faculty members. <br><br>
+            They are given exceptional training in computer applications and multiple languages along with government approved diplomas. The uniqueness of the program is that the students will be instructed in their respective skills to prepare for their secured future life. TCIS provides them a spiritual and value oriented learning environment with nourishing food and comfortable accommodation at free of cost.<br><br></div>
+        
+    </div>
+
+    <div class="containerOdd"  id="container5">
+
+        <h1 class="heading1">MISSION</h1>
+
+      
+        <div class="paraOdd" >Providing quality education with moral ethics in a conducive environment that promote creative thinking, socio-cultural responsibilities and humanitarian values through establishing value oriented institutions and charitable activities.</div>
+        
+    </div>
+
+    <div class="containerEven" id="container6">
+
+        <h1 class="heading1" >ADMISSION PROCEDURE</h1>
+
+      
+        <div class="paraEven">Admission to TCIS is based on an entrance test and personal interview. Every year a maximum number of 25 male students who have passed their 7th standard with high distinction, will be admitted for this course.</div>
+        
+    </div>
+
+
+
+<!--       
+container3 starts i.e. footer  -->
+<div  id="footercontainer">
+    <div id="footerDirectSubContainer1" >   
+        <div id="footerLogo">
+            <img src="http://taibaonline.in/wp-content/uploads/2023/10/white-logo.png" alt="Taiba logo" style="width: 100px;">
+            <img src="http://taibaonline.in/wp-content/uploads/2023/10/nadi-logo.png" alt="students Union logo" style="width: 80px;margin-left: 10px;">
+        </div>
+        <div class="footerPara" style="color:aliceblue;margin-top: 20px;font-size: large;">
+            A unique combination of modern secular education and moral Islamic learning to bridge the gap between generations and create tomorrow's leaders.
+        </div>
+    </div>
+
+    <div id="footerDirectSubContainer2" >
+
+        <div class="InsidefooterSubContainer2" style="color:aqua;font-size: large;">
+            <span> OUR LINKS </span>
+            <span>
+                <a  href="index.htm" >Home</a>  <br>
+                <a href="About_Us.htm"> About Us</a> <br> 
+                <a href="Institute.htm"> Institutes</a> <br> 
+                <a href="Photos"> Photos</a>  <br> 
+                <a href="Student’s_Clubs">Student’s Clubs</a><br> 
+                <a href="TaibaOnline/ Contact_us">Contact us</a>
+            </span>
+            
+        </div>
+        
+        <div class="InsidefooterSubContainer2" style="color:aqua;font-size: large ;">
+            <span> OUR DOWNLOADS  </span>
+            <span>
+                <a  href="TaibaOnline/TDC_Introduction" >TDC Introduction</a>   <br>
+                <a href="TaibaOnline/ Taiba College Brochure">Taiba College Brochure</a> 
+            </span>
+        </div>
+        
+        <div class="InsidefooterSubContainer2"  style="color:white;font-size: large;">
+            <span style="color:aqua;">CONTACT INFO</span> 
+            <span style="line-height: 30px;display: flex;">
+                9644006854, 8889995739 <BR> tecindore@gmail.com <BR> Taiba Edu Complex 61/62 Asha Palace, Khajrana Indore M.P. 452016
+            </span>
+           
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>

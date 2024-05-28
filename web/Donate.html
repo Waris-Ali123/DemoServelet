@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            font-family:sans-serif;
+        }
+
+        body {
+            /*background-color: rgba(90, 87, 0, 0.959);*/
+            background-color: whitesmoke;
+            /* background-image: url("https://png.pngtree.com/thumb_back/fh260/background/20201026/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-image_438818.jpg"); */
+
+        }
+
+        body::-webkit-scrollbar {
+    display: none;
+            }
+
+        #header {
+            width:100%;
+            height: 80px;
+            background-color: rgb(32, 61, 0);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            
+        }
+        
+        #headerA{
+            display: flex;
+            gap:30px;
+            /* border: 1px solid none; */
+        
+
+        }
+
+        #headerA a {
+            color: aliceblue;
+            text-decoration: none;
+            font-size: 17.33px;
+            font-weight: 600;
+            padding: 15px;
+        }
+        
+        #headerA a:hover{
+            border-style: none;
+            border-color: rgb(18, 71, 94);
+            background-color:aliceblue;
+            color: rgb(0, 30, 30);;
+            border-radius: 15px;
+        }
+        
+        /* container1 */
+        
+        #container1{
+
+            width: 100%;
+            height: 130px;
+            background-color: rgba(33, 33, 33, 0.871);
+            color: rgb(255, 254, 254);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+            
+            
+        }
+
+        .parallax {
+            overflow: hidden;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        #donation_container {
+            margin-top: 25px;
+            width:55%;
+            /* height: 620px; */
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            transform: translateX(35%);
+            padding: 10px;
+            padding-top: 25px;
+            padding-bottom: 55px;
+            margin-bottom: 5%;
+            border-radius: 25px;
+            align-self: center;
+            box-shadow:0 1rem 3rem rgba(0,0,0, .175);
+
+        }
+
+        #mainForm{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            gap:15px;
+        }
+        .heading2 {
+            font-style: georgia;
+            color: rgb(0, 24, 24);
+            transform: translateX(5%);
+        }
+
+        #sadqaAndZakaatRow{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            gap:5px;
+        }
+
+        .zakaatSadqa {
+            width: 100%;
+            height: 30px;
+            border: 1px solid gray;
+            font-size: 20px;
+            /* text-align: center; */
+            display: flex  ;
+            align-items: center;
+            justify-content: center;
+            gap:5px;
+            padding : 5px;      
+            font-family: Georgia;
+            background-color: aliceblue;
+            border-radius: 5px;
+        }
+
+        #amountWithCurrency {
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            gap: 15px;
+        }
+        
+        #selectCurrency {
+            font-size: larger;
+            background-color: aliceblue;
+            width: 45%;
+            height: 43px;
+            border:1px solid gray;
+            border-radius: 5px;
+            
+        }
+
+        .fillingString {
+            background-color:aliceblue;
+            height: 40px;
+            font-size: larger;
+            border: 1px solid gray;
+            width: 90%;
+            border-radius: 5px ;
+        }
+
+
+        
+        #securityCodeRow{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap:25px;
+            align-items: center;
+            width: 90%;
+        }
+
+        #codeInput {
+            width:500px;
+        }
+        
+
+        #captchaContainer {
+            display: flex;
+            gap:15px;
+            align-items: center;
+        }
+        
+        #captchaImage{
+            height: 42.5px;
+            width: cover;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: aliceblue;
+        }
+        
+
+        #refreshButton {
+            transition: all 0.3s ease 0s;
+
+        }
+
+
+        
+        #refreshButton:hover {
+            /* 
+            */
+            
+            /* background-color: #0c3343; */
+            background-color:  black;
+	        box-shadow: 0px 15px 20px #fff;
+            border-radius: 5px;
+	        transform: translateY(-7px);
+
+            
+        }
+
+        #bankLogoSelection {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            width: 90%;
+          
+        }
+
+        .bank {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #ProceedButton {
+            width: 50%;
+            height: 40px;
+            background-color:darkcyan;
+            border-radius:15px;
+            border:none;
+            color:white;
+            font-size: larger;
+            font-family: Georgia;
+            text-align: center;
+            padding: 5px;
+            transition: all 0.3s ease 0s;
+
+        }
+
+        #ProceedButton:hover {
+        background-color: #0c3343;
+	    box-shadow: 0px 15px 20px #fff;
+	    color: #fff;
+	    transform: translateY(-7px);   
+        }
+        
+        
+                          
+         /* footer starts here */
+         #footercontainer {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+             justify-content: space-around;
+             width:100%;
+             /* height: 400px; Set the height of the container */
+             border: 2px solid darkcyan; /* Add a border for better visibility */
+             /* background-color: rgb(80, 71, 46); */
+             background-color: rgba(16, 16, 16, 0.96);
+
+             padding-top: 35px;
+          
+            }
+
+            
+            #footerDirectSubContainer1 {
+                width: 400px;
+                padding-left: 25px;
+                padding-right: 25px;
+                height: 350px;  
+                display: flex;
+                flex-direction: column;
+                gap:15px;  
+
+            }
+            
+            #footerLogo {
+                display: flex;
+                gap: 15px;
+            }
+
+            #footerDirectSubContainer2 {
+                display: flex;
+                /* width : 700px; */
+                flex-wrap: wrap;
+                column-gap: 25px;
+                padding-left: 25px;
+                /* align-items: center; */
+                justify-content: center;
+                padding-right: 25px;
+            }
+            
+            .InsidefooterSubContainer2{
+                /* width:inherit; */
+                height: 350px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .InsidefooterSubContainer2 a{
+                text-decoration: none;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: last baseline;
+                /* gap: 20PX;  */
+            }
+            
+            .InsidefooterSubContainer2 a:hover{
+                text-decoration: underline;
+                color: aqua;
+            }
+
+            .InsidefooterSubContainer2 span {
+                text-align: justify;
+                /* line-height:; */
+                /* width:fit-content; */
+            }
+            .footerPara {
+                    font-size: medium;
+                    font-family:Georgia;
+                    text-align: justify;
+                    word-spacing: 5px;
+                    line-height: 2;
+                    color: rgb(44, 44, 44);
+            
+                }
+
+        </style>
+</head>
+<body  >
+    
+    <div id="header">
+        <a href="Institute.htm">  <img src="http://taibaonline.in/wp-content/uploads/2023/10/white-logo.png" alt="TaibaLogo" width="90px" height="50px"> </a>
+        <div id="headerA">
+            <a href="index.html" >Home</a>
+            <a href="About_Us.html">About Us</a>
+            <a href="Institute.html"> Institutes </a>
+            <a href="Donate.html">Donate Now</a>     
+      </div>
+   </div>
+
+   <div id="container1"  >
+        <h1 >TAIBA COLLEGE OF INTEGRATED STUDIES</h1>
+        <span id="tagLine">
+            Your donation can be used for any permissible, religious, reformatory, welfare, well-wishing, Spiritual, and good purpose
+        </span>
+   </div>
+
+   <div id="donation_container">
+        <h2 class="heading2">Donate to Taiba College Of Integrated Studies</h2>
+
+        <form id="mainForm" method="post"  action="donateServlet">
+
+            <div id="sadqaAndZakaatRow">
+
+                
+                <label class="zakaatSadqa" >
+                    <input type="radio" name="sadqa" value="Sadqa" > 
+                    <span>
+                        Sadqa
+                    </span>
+                </label>
+                
+                <label class="zakaatSadqa" >
+                    <input type="radio" name="zakat" value="Zakat" > 
+                    <span>
+                        Zakat/Fitra
+                    </span>
+                </label>
+                
+            </div>
+
+            <div id="amountWithCurrency">      
+            
+                <select name="selectCurrency" id="selectCurrency"  >
+                    <option value="USD">USD</option>
+                    <option value="PKR">PKR</option>
+                    <option value="GBP">GBP</option>
+                    <option value="AUD">AUD</option>
+                    <option value="CAD">CAD</option>
+                    <option value="CNY">CNY</option>
+                    <option value="EUR">EUR</option>
+                    <option value="JPY">JPY</option>
+                    <option value="SAR">SAR</option>
+                    <option value="AED">AED</option>
+                </select>
+            
+                <input type="text" class = "fillingString" name="amount"  onfocus="clearPlaceholder(this)" placeholder="Amount" >
+
+            </div>
+
+            <input type="text" class = "fillingString" name="uname" onfocus="clearPlaceholder(this)" placeholder="Name" >
+            <input type="text" class = "fillingString" name="contact"  onfocus="clearPlaceholder(this)" placeholder="Contact" >
+            <input type="text" class = "fillingString" name="email"  onfocus="clearPlaceholder(this)" placeholder="E-mail" >
+
+            <div id="securityCodeRow">
+
+                <input type="text" class = "fillingString"   name="securityCode"  onfocus="clearPlaceholder(this)" placeholder="Security Code" >
+                
+                <img id="captchaImage" src="https://www.dawateislami.net/onlinedonation/captcha?Tue%20Jan%2023%202024%2022:17:19%20GMT+0530%20(India%20Standard%20Time)" alt="catpcha code">
+
+                <img id="refreshButton" src="https://cdn-icons-png.flaticon.com/512/9679/9679604.png" alt="logo" width="30px" height="30px" onclick="refreshPage()">
+            
+            </div>
+                
+                <script>
+                    function refreshPage() {
+                      // Reload the entire page
+                      location.reload(true);
+                    }
+                  </script>
+
+            <div id="bankLogoSelection">
+
+                
+                <label for="HBL Pay" class="bank">
+                    <input type="radio" name="hbl" id="HBL_Pay">
+                    <img src="https://www.dawateislami.net/onlinedonation/resources/images/app-logos/HBL.png" alt="HBL pay" width="50%" height="25%">      <!---->
+                </label>
+                
+                <label for="Bank Alfalah" class="bank" >
+                    <input type="radio" name="alfalah" id="Bank_Alfalah">
+                    <img src="https://www.dawateislami.net/onlinedonation/resources/images/app-logos/AL-FALAH.png" alt="HBL pay" width="50%" height="25%">
+                </label>
+
+            </div>
+
+            <button id = "ProceedButton" name="ProceedtoPayment" Value="Proceed to Payment" type="submit" >Proceed to Payment</button>
+
+
+        </form>
+   </div>
+
+
+
+   
+
+<!--       
+container3 starts i.e. footer  -->
+<div  id="footercontainer">
+    <div id="footerDirectSubContainer1" >   
+        <div id="footerLogo">
+            <img src="http://taibaonline.in/wp-content/uploads/2023/10/white-logo.png" alt="Taiba logo" style="width: 100px;">
+            <img src="http://taibaonline.in/wp-content/uploads/2023/10/nadi-logo.png" alt="students Union logo" style="width: 80px;margin-left: 10px;">
+        </div>
+        <div class="footerPara" style="color:aliceblue;margin-top: 20px;font-size: large;">
+            A unique combination of modern secular education and moral Islamic learning to bridge the gap between generations and create tomorrow's leaders.
+        </div>
+    </div>
+
+    <!-- <hr style="position: relative;left:0px;top:25px;width: 95%;"> -->
+    <div id="footerDirectSubContainer2" >
+
+        <div class="InsidefooterSubContainer2" style="color:aqua;font-size: large;">
+            <span> OUR LINKS </span>
+            <span>
+                <a  href="index.htm" >Home</a>  <br>
+                <a href="About_Us.htm"> About Us</a> <br> 
+                <a href="Institute.htm"> Institutes</a> <br> 
+                <a href="Photos"> Photos</a>  <br> 
+                <a href="Student’s_Clubs">Student’s Clubs</a><br> 
+                <a href="TaibaOnline/ Contact_us">Contact us</a>
+            </span>
+            
+        </div>
+        
+        <div class="InsidefooterSubContainer2" style="color:aqua;font-size: large ;">
+            <span> OUR DOWNLOADS  </span>
+            <span>
+                <a  href="TaibaOnline/TDC_Introduction" >TDC Introduction</a>   <br>
+                <a href="TaibaOnline/ Taiba College Brochure">Taiba College Brochure</a> 
+            </span>
+        </div>
+        
+        <div class="InsidefooterSubContainer2"  style="color:white;font-size: large;">
+            <span style="color:aqua;">CONTACT INFO</span> 
+            <span style="line-height: 30px;display: flex;">
+                9644006854, 8889995739 <BR> tecindore@gmail.com <BR> Taiba Edu Complex 61/62 Asha Palace, Khajrana Indore M.P. 452016
+            </span>
+           
+        </div>
+    </div>
+
+</div>
+
+   
+
+</body>
+</html>
