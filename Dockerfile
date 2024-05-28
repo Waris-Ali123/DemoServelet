@@ -1,10 +1,24 @@
-FROM tomcat:9.0.53-jdk11-openjdk
+FROM ubuntu:14.04
+RUN apt-get update && apt-get -y upgrade
 
-# Copy WAR file to the webapps directory of Tomcat
-COPY dist/Demoservlet.war /usr/local/tomcat/webapps/
+RUN apt-get -y install software-properties-common
+RUN add-apt-repository ppa:webupd8team/java
+RUN apt-get -y update
 
-# Expose port 8080 to the outside world
+# Accept the license
+RUN echo "oracle-java7-installer shared/accepted-oracle-license-v1-1 boolean true" | debconf-set-selections
+
+RUN apt-get -y install oracle-java7-installer
+
+# Here comes the tomcat installation
+RUN apt-get -y install tomcat7
+RUN echo "JAVA_HOME=/usr/lib/jvm/java-7-oracle" >> /etc/default/tomcat7
+
+# Expose the default tomcat port
 EXPOSE 8080
 
-# Run Tomcat server
-CMD ["catalina.sh", "run"]
+# Start the tomcat (and leave it hanging)
+CMD service tomcat7 start && tail -f /var/lib/tomcat7/logs/catalina.out
+
+
+
