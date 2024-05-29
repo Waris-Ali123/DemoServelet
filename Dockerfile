@@ -5,7 +5,7 @@ FROM tomcat:9.0.53-jdk11-openjdk
 ENV JAVA_OPTS="-Djava.security.egd=file:/dev/./urandom"
 
 # Copy the WAR file to the webapps directory of Tomcat
-COPY dist/Demoservelet.war /usr/local/tomcat/webapps/
+COPY dist/DemoServelet.war /usr/local/tomcat/webapps/
 
 # Expose port 8080
 EXPOSE 8080
