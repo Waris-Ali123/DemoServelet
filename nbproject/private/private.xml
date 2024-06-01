@@ -6,8 +6,13 @@
             <file>file:/C:/NetBeansProjects/DemoServelet/web/DisplayImages.jsp</file>
             <file>file:/C:/NetBeansProjects/DemoServelet/web/Donate.html</file>
             <file>file:/C:/NetBeansProjects/DemoServelet/web/About_Us.html</file>
+            <file>file:/C:/NetBeansProjects/DemoServelet/config/context-manager.xml</file>
+            <file>file:/C:/NetBeansProjects/DemoServelet/Dockerfile</file>
+            <file>file:/C:/NetBeansProjects/DemoServelet/config/context-host-manager.xml</file>
             <file>file:/C:/NetBeansProjects/DemoServelet/web/Institute.html</file>
             <file>file:/C:/NetBeansProjects/DemoServelet/web/index.jsp</file>
+            <file>file:/C:/NetBeansProjects/DemoServelet/config/tomcat-users.xml</file>
+            <file>file:/C:/NetBeansProjects/DemoServelet/config/server.xml</file>
         </group>
     </open-files>
 </project-private>

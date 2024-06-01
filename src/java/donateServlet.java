@@ -32,10 +32,9 @@ public class donateServlet extends HttpServlet {
         Connection con = null;
         try {
 
-            String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
+            String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
             String dbUser = "root";
-            String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
-
+            String dbPassword = "123456";
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(jdbcURL,dbUser,dbPassword);
             out.println("CONNECTION SUCCESSFULL...");

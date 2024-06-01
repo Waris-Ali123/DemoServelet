@@ -32,9 +32,13 @@ public class Addimage extends HttpServlet {
         Connection con = null;
         InputStream is = null;
         
-        String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
+//        String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
+//        String dbUser = "root";
+//        String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
+
+        String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
         String dbUser = "root";
-        String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
+        String dbPassword = "123456";
         
         Part filePart = request.getPart("imagefile");
         if (filePart != null){

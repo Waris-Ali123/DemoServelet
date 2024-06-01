@@ -24,9 +24,9 @@ public class ImageServlet extends HttpServlet {
             String imageid = request.getParameter("id");
             Connection con = null;
             try{
-                String jdbcURL = "jdbc:mysql://roundhouse.proxy.rlwy.net:12449/railway";
-        String dbUser = "root";
-        String dbPassword = "aSJgAKmBsPORoDTdoCyuaqiFwkWNJWDy";
+                String jdbcURL = "jdbc:mysql://localhost:3306/donationdb";
+                String dbUser = "root";
+                String dbPassword = "123456";
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 con = DriverManager.getConnection(jdbcURL,dbUser,dbPassword);
                 
